@@ -1,0 +1,22 @@
+module paper_plugin
+
+typealias PluginMap = Mapping<String, Plugin>
+class Dependencies {
+  bootstrap: PluginMap
+  server: PluginMap
+}
+
+class Plugin {
+  load: String(matches(Regex("BEFORE|AFTER")))
+  required: Boolean?
+  `join-classpath`: Boolean?
+}
+
+name: String
+version: String
+main: String
+description: String
+`api-version`: String
+bootstrapper: String?
+loader: String?
+dependecies: Dependencies?
