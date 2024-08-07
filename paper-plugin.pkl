@@ -1,6 +1,8 @@
 module paper_plugin
 
 typealias PluginMap = Mapping<String, Plugin>
+
+
 class Dependencies {
   bootstrap: PluginMap
   server: PluginMap
@@ -20,3 +22,4 @@ description: String
 bootstrapper: String?
 loader: String?
 dependecies: Dependencies?
+contributors: Listing<String>?
